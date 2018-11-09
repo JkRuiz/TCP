@@ -1,0 +1,10 @@
+Server listening....
+Server adopted connection #1
+C1: Connection started at 2018-11-09 00:03:06.296711
+C1: STATUS_OK
+S: Sending InfinityWar.mp4 to C1 with IP 157.253.205.51 and port 48476
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C1: FILE_OK
+C1: Transfered in 0:01:34.923654s
+S: Transfered in 0:01:34.951778s
