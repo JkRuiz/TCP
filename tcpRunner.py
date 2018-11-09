@@ -5,9 +5,7 @@ from threading import Thread
 
 
 def run_server():
-    p = getProperties()
-    serverIp = p['serverIp']
-    os.system('sshpass -p "1-zhK75Lr@g" ssh -o StrictHostKeyChecking=no pruebas@' + str(serverIp) + ' "python3 TCP/tcpServer.py"')
+    os.system('python3.6 tcpServerJesse.py')
 
 
 def run_cmd(chan, cmd):
@@ -55,7 +53,7 @@ def makeDirFile():
 def runTest():
     properties = getProperties()
     numberClients = int(properties['numberClients'])
-    # startIptraf(numberClients)
+    startIptraf(numberClients)
     time.sleep(1)
     print('Cargo todo hasta antes de crear el thread')
     serverThread = Thread(target=run_server)
@@ -68,7 +66,7 @@ def runTest():
         t = Thread(target=run_client, args=[listOfIPs[i]])
         t.start()
     serverThread.join()
-    # killIptraf()
+    killIptraf()
 
 
 def swapProperties(n):
@@ -83,9 +81,9 @@ p = getProperties()
 nClients = p['nClients']
 makeDirFile()
 for i in nClients:
-    # logStartNetstat(i)
+    logStartNetstat(i)
     print('Running client #', str(i))
     swapProperties(i)
     runTest()
-    # logEndNetstat(i)
+    logEndNetstat(i)
     time.sleep(10)
