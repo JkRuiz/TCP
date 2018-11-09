@@ -78,9 +78,9 @@ def swapProperties(n):
 
 
 p = getProperties()
-nClients = p['nClients']
+nTest = p['nTest']
 makeDirFile()
-for i in nClients:
+for i in range(1, nTest):
     logStartNetstat(i)
     print('Running client #', str(i))
     swapProperties(i)
