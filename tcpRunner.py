@@ -7,7 +7,7 @@ from threading import Thread
 def run_server():
     p = getProperties()
     serverIp = p['serverIp']
-    os.system('sshpass -p "1-zhK75Lr@g" ssh -o StrictHostKeyChecking=no pruebas@' + str(serverIp) + ' "python3 TCP/tcpClient.py"')
+    os.system('sshpass -p "1-zhK75Lr@g" ssh -o StrictHostKeyChecking=no pruebas@' + str(serverIp) + ' "python3 TCP/tcpServer.py"')
 
 
 def run_cmd(chan, cmd):
@@ -60,7 +60,7 @@ def runTest():
     serverThread = Thread(target=run_server)
     listOfIPs = properties['clientIPs']
     serverThread.start()
-    time.sleep(1)
+    time.sleep(10)
     for i in range(numberClients):
         t = Thread(target=run_client, args=[listOfIPs[i]])
         t.start()

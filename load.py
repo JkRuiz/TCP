@@ -13,8 +13,14 @@ def copy_to_client(addr):
     os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "git clone https://github.com/JkRuiz/TCP.git"')
 
 
+def copy_to_server(addr):
+    os.system('sshpass -p "' + clients['suPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['serverUsername'] + '@' + addr + ' "rm -rf TCP"')
+    os.system('sshpass -p "' + clients['suPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['serverUsername'] + '@' + addr + ' "git clone https://github.com/JkRuiz/TCP.git"')
+
+
 clients = loadData()
 clientIPs = clients['clientIPs']
+copy_to_server(clients['serverIp'])
 for ip in clientIPs:
     copy_to_client(ip)
 
