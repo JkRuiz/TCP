@@ -5,7 +5,7 @@ from threading import Thread
 
 
 def run_server():
-    os.system('python3.6 tcpServerJesse.py')
+    os.system('python3 tcpServer.py')
 
 
 def run_cmd(chan, cmd):

@@ -82,12 +82,11 @@ with open('clientTCPOut.log', 'w') as log:
 
     # receive filename of file to be transfered
     fileName = msgReceive(s)
-    newFileName = fileName.split('/')[1]
 
     # create hasher to check integrity later on
     hasher = hashlib.md5()
 
-    with open("R_" + newFileName, 'wb') as f:
+    with open("R_" + fileName, 'wb') as f:
         i = 0
         while True:
             i += 1
