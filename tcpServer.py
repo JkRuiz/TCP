@@ -70,7 +70,7 @@ def threaded_function(conn, addr, id):
 
 
 def getProperties():
-    with open('configTCP.json', 'r') as file:
+    with open('TCP/configTCP.json', 'r') as file:
         properties = json.load(file)
     return properties
 

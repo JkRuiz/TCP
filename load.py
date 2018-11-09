@@ -9,8 +9,7 @@ def loadData():
 
 
 def copy_to_client(addr):
-    os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "rm -rf RedesLab4"')
-    os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "rm R_*"')
+    os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "rm -rf TCP"')
     os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "git clone https://github.com/JkRuiz/TCP.git"')
 
 
@@ -18,3 +17,8 @@ clients = loadData()
 clientIPs = clients['clientIPs']
 for ip in clientIPs:
     copy_to_client(ip)
+
+'''
+os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "rm -rf TCP"')
+os.system('sshpass -p "' + clients['clientPassword'] + '" ssh -o StrictHostKeyChecking=no ' + clients['clientUsername'] + '@' + addr + ' "rm R_*"')
+'''
