@@ -60,9 +60,9 @@ def runTest():
     serverThread.start()
     print('Empezo a correr el thread server')
     time.sleep(1)
-    for i in range(0, numberClients):
+    for j in range(0, numberClients):
         print('Empezaron a correr los clientes')
-        t = Thread(target=run_client, args=[listOfIPs[i]])
+        t = Thread(target=run_client, args=[listOfIPs[j]])
         t.start()
     serverThread.join()
     killIptraf()
