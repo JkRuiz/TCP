@@ -57,11 +57,14 @@ def runTest():
     numberClients = int(properties['numberClients'])
     # startIptraf(numberClients)
     time.sleep(1)
+    print('Cargo todo hasta antes de crear el thread')
     serverThread = Thread(target=run_server)
     listOfIPs = properties['clientIPs']
     serverThread.start()
-    time.sleep(10)
+    print('Empezo a correr el thread')
+    time.sleep(1)
     for i in range(numberClients):
+        print('Empezaron a correr los clientes')
         t = Thread(target=run_client, args=[listOfIPs[i]])
         t.start()
     serverThread.join()
