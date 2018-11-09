@@ -86,8 +86,7 @@ fileName = properties['fileName']
 numberClients = int(properties['numberClients'])
 port = int(properties['serverPort'])
 chunkSize = int(properties['chunkSize'])
-#logPrefix = properties['logPrefix'] + str(numberClients) + "_Server.log"
-logPrefix = 'test.log'
+logPrefix = properties['logPrefix'] + str(numberClients) + "_Server.log"
 
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostname()
