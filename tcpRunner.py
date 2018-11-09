@@ -82,7 +82,6 @@ makeDirFile()
 for i in range(1, (nTest + 1)):
     logStartNetstat(i)
     print('Running client #', str(i))
-    swapProperties(i)
     runTest()
     logEndNetstat(i)
     time.sleep(10)
