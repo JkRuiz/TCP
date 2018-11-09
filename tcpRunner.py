@@ -55,13 +55,12 @@ def runTest():
     numberClients = int(properties['numberClients'])
     startIptraf(numberClients)
     time.sleep(1)
-    print('Cargo todo hasta antes de crear el thread')
     serverThread = Thread(target=run_server)
     listOfIPs = properties['clientIPs']
     serverThread.start()
-    print('Empezo a correr el thread')
+    print('Empezo a correr el thread server')
     time.sleep(1)
-    for i in range(numberClients):
+    for i in range(0, numberClients):
         print('Empezaron a correr los clientes')
         t = Thread(target=run_client, args=[listOfIPs[i]])
         t.start()
@@ -80,7 +79,7 @@ def swapProperties(n):
 p = getProperties()
 nTest = p['nTest']
 makeDirFile()
-for i in range(1, nTest):
+for i in range(1, (nTest + 1)):
     logStartNetstat(i)
     print('Running client #', str(i))
     swapProperties(i)
