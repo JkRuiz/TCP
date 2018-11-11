@@ -67,6 +67,8 @@ def threaded_function(conn, addr, id):
     summary = str(datetime.datetime.now() - start) + "s"
     sout("C" + str(id) + ": Transfered in " + summary)
     conn.close()
+    log = open('LogServer' + str(indicator) + '.log', w)
+    indicator += 1
 
 
 def getProperties():
@@ -81,6 +83,7 @@ def sout(l):
     print(l)
 
 
+indicator = 0
 properties = getProperties()
 fileName = properties['fileName']
 numberClients = int(properties['numberClients'])
