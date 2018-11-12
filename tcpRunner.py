@@ -59,7 +59,7 @@ def runTest():
     listOfIPs = properties['clientIPs']
     serverThread.start()
     print('Empezo a correr el thread server')
-    time.sleep(1)
+    time.sleep(10)
     for j in range(0, numberClients):
         print('Empezaron a correr los clientes')
         t = Thread(target=run_client, args=[listOfIPs[j]])

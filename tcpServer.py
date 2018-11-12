@@ -116,6 +116,8 @@ with open((logPrefix), 'w') as log:
 
     threads = []
     for j in range(numberClients):
+        if j == 0:
+            tStart = datetime.datetime.now()
         conn, addr = serverSocket.accept()
         sout('Server adopted connection #' + str(j + 1))
         thread = Thread(target=threaded_function, args=(conn, addr, j + 1))
