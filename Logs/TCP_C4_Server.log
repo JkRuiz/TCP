@@ -1,0 +1,66 @@
+Server listening....
+Server adopted connection #1
+C1: Connection started at 2018-11-12 14:35:49.056522
+Server adopted connection #2
+C1: STATUS_OK
+C2: Connection started at 2018-11-12 14:35:49.078483
+S: Sending InfinityWar.mp4 to C1 with IP 157.253.205.51 and port 48742
+Server adopted connection #3
+C2: STATUS_OK
+S: Sending InfinityWar.mp4 to C2 with IP 157.253.205.54 and port 45632
+C3: Connection started at 2018-11-12 14:35:49.109912
+C3: STATUS_OK
+S: Sending InfinityWar.mp4 to C3 with IP 157.253.205.7 and port 41028
+Server adopted connection #4
+C4: Connection started at 2018-11-12 14:35:49.157391
+C4: STATUS_OK
+Server adopted connection #5
+S: Sending InfinityWar.mp4 to C4 with IP 157.253.205.95 and port 54524
+C5: Connection started at 2018-11-12 14:35:49.182347
+Server adopted connection #6
+C5: STATUS_OK
+S: Sending InfinityWar.mp4 to C5 with IP 157.253.205.105 and port 33816
+C6: Connection started at 2018-11-12 14:35:49.184354
+C6: STATUS_OK
+S: Sending InfinityWar.mp4 to C6 with IP 157.253.205.124 and port 33716
+Server adopted connection #7
+C7: Connection started at 2018-11-12 14:35:49.216231
+C7: STATUS_OK
+S: Sending InfinityWar.mp4 to C7 with IP 157.253.205.123 and port 52674
+Server adopted connection #8
+C8: Connection started at 2018-11-12 14:35:49.235669
+C8: STATUS_OK
+S: Sending InfinityWar.mp4 to C8 with IP 157.253.205.34 and port 48282
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C1: FILE_OK
+C1: Transfered in 0:05:09.935968s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C7: FILE_OK
+C7: Transfered in 0:05:11.917796s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C4: FILE_OK
+C4: Transfered in 0:05:18.611156s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C3: FILE_OK
+C3: Transfered in 0:05:25.796748s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C2: FILE_OK
+C2: Transfered in 0:08:03.760605s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C5: FILE_OK
+C5: Transfered in 0:08:05.087923s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C6: FILE_OK
+C6: Transfered in 0:08:05.436725s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C8: FILE_OK
+C8: Transfered in 0:08:11.202648s
+S: Transfered in 0:08:11.491813s
