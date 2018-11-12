@@ -1,66 +1,66 @@
 Server listening....
 Server adopted connection #1
 Server adopted connection #2
-C1: Connection started at 2018-11-12 12:26:46.309510
-C2: Connection started at 2018-11-12 12:26:46.474144
-Server adopted connection #3
+C1: Connection started at 2018-11-12 13:36:09.500878
 C1: STATUS_OK
+C2: Connection started at 2018-11-12 13:36:09.519123
+S: Sending InfinityWar.mp4 to C1 with IP 157.253.205.51 and port 48722
+Server adopted connection #3
 C2: STATUS_OK
-S: Sending InfinityWar.mp4 to C1 with IP 157.253.205.51 and port 48708
-C3: Connection started at 2018-11-12 12:26:46.631775
-S: Sending InfinityWar.mp4 to C2 with IP 157.253.205.123 and port 52644
+S: Sending InfinityWar.mp4 to C2 with IP 157.253.205.7 and port 41012
+C3: Connection started at 2018-11-12 13:36:09.529480
 Server adopted connection #4
 C3: STATUS_OK
-S: Sending InfinityWar.mp4 to C3 with IP 157.253.205.95 and port 54490
-C4: Connection started at 2018-11-12 12:26:46.723882
+S: Sending InfinityWar.mp4 to C3 with IP 157.253.205.54 and port 45598
+C4: Connection started at 2018-11-12 13:36:09.548915
 C4: STATUS_OK
-S: Sending InfinityWar.mp4 to C4 with IP 157.253.205.124 and port 33682
+S: Sending InfinityWar.mp4 to C4 with IP 157.253.205.123 and port 52658
 Server adopted connection #5
-C5: Connection started at 2018-11-12 12:26:46.783061
-C5: STATUS_OK
-S: Sending InfinityWar.mp4 to C5 with IP 157.253.205.54 and port 45584
+C5: Connection started at 2018-11-12 13:36:09.577407
 Server adopted connection #6
-C6: Connection started at 2018-11-12 12:26:46.786688
-C6: STATUS_OK
+C5: STATUS_OK
+C6: Connection started at 2018-11-12 13:36:09.596682
+S: Sending InfinityWar.mp4 to C5 with IP 157.253.205.105 and port 33800
 Server adopted connection #7
-S: Sending InfinityWar.mp4 to C6 with IP 157.253.205.105 and port 33768
-C7: Connection started at 2018-11-12 12:26:46.838037
+C6: STATUS_OK
+C7: Connection started at 2018-11-12 13:36:09.610914
 Server adopted connection #8
+S: Sending InfinityWar.mp4 to C6 with IP 157.253.205.95 and port 54510
+C8: Connection started at 2018-11-12 13:36:09.622165
 C7: STATUS_OK
-S: Sending InfinityWar.mp4 to C7 with IP 157.253.205.7 and port 40994
-C8: Connection started at 2018-11-12 12:26:46.844061
 C8: STATUS_OK
-S: Sending InfinityWar.mp4 to C8 with IP 157.253.205.34 and port 48250
-S: END_OF_FILE
-S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+S: Sending InfinityWar.mp4 to C7 with IP 157.253.205.124 and port 33702
+S: Sending InfinityWar.mp4 to C8 with IP 157.253.205.34 and port 48264
 S: END_OF_FILE
 S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
 C2: FILE_OK
-C2: Transfered in 0:08:45.199612s
+C2: Transfered in 0:03:46.352453s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
 S: END_OF_FILE
 S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
 C1: FILE_OK
-C1: Transfered in 0:08:53.536517s
-C7: FILE_OK
-C7: Transfered in 0:08:53.830816s
-S: END_OF_FILE
-S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
-C3: FILE_OK
-C3: Transfered in 0:09:00.278810s
-S: END_OF_FILE
-S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
-C5: FILE_OK
-C5: Transfered in 0:10:33.236961s
-S: END_OF_FILE
-S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
-C4: FILE_OK
-C4: Transfered in 0:10:35.306372s
-S: END_OF_FILE
-S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
-C8: FILE_OK
-C8: Transfered in 0:10:35.873883s
+C1: Transfered in 0:03:49.995352s
 S: END_OF_FILE
 S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
 C6: FILE_OK
-C6: Transfered in 0:10:47.262461s
-S: Transfered in 0:10:48.977959s
+C6: Transfered in 0:03:52.539400s
+C4: FILE_OK
+C4: Transfered in 0:03:53.260749s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C8: FILE_OK
+C8: Transfered in 0:07:27.023507s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C7: FILE_OK
+C7: Transfered in 0:07:33.912035s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C5: FILE_OK
+C5: Transfered in 0:07:34.140278s
+S: END_OF_FILE
+S: MD5Hash 683ee13b3d8bc0d38c73d6192f835be1
+C3: FILE_OK
+C3: Transfered in 0:07:39.130769s
+S: Transfered in 0:07:39.251857s
