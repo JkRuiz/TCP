@@ -71,7 +71,7 @@ def runTest():
 def swapProperties(n):
     with open('configTCP.json', 'r') as file:
         tmp = json.load(file)
-        tmp['numberClients'] = int(n)
+        tmp['indicatorTest'] = int(n)
     with open('configTCP.json', 'w') as file:
         file.write(json.dumps(tmp))
 
@@ -82,6 +82,7 @@ makeDirFile()
 for i in range(1, (nTest + 1)):
     logStartNetstat(i)
     print('Running client #', str(i))
+    swapProperties(i)
     runTest()
     logEndNetstat(i)
     time.sleep(10)

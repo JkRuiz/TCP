@@ -67,8 +67,6 @@ def threaded_function(conn, addr, id):
     summary = str(datetime.datetime.now() - start) + "s"
     sout("C" + str(id) + ": Transfered in " + summary)
     conn.close()
-    log = open('LogServer' + str(indicator) + '.log', w)
-    indicator += 1
 
 
 def getProperties():
@@ -89,7 +87,9 @@ fileName = properties['fileName']
 numberClients = int(properties['numberClients'])
 port = int(properties['serverPort'])
 chunkSize = int(properties['chunkSize'])
-logPrefix = properties['logPrefix'] + str(numberClients) + "_Server.log"
+indicatorTest = properties['indicatorTest']
+logPrefix = properties['logPrefix'] + str(indicatorTest) + "_Server.log"
+
 
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostname()
