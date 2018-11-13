@@ -4,8 +4,14 @@ import json
 import datetime
 from urllib.request import urlopen
 
-url = "http://127.0.0.1:5000/{}"
+url = "http://157.253.205.122:5000/{}"
 createMetric = "metrics"
+
+
+def send_metric():
+    metric = get_metrics()
+    jsonPost = build_json(metric)
+    post_metric(jsonPost)
 
 
 def get_metrics():
@@ -25,8 +31,3 @@ def build_json(bytesR):
 
 def post_metric(payload):
     return requests.post(url.format(createMetric), json=payload)
-
-
-metric = get_metrics()
-jsonPost = build_json(metric)
-post_metric(jsonPost)
