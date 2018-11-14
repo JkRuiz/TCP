@@ -3,6 +3,7 @@ import time
 import socket
 import hashlib
 import sys
+import request as rq
 
 
 def msgSend(msg, sock):
@@ -55,6 +56,8 @@ def sout(s):
 
 
 with open('clientTCPOut.log', 'w') as log:
+    # Envia el numero de bytes recibidos antes de recibir el archivo
+    rq.send_metric()
     # load properties form json file
     properties = getProperties()
     host = str(properties['serverIp'])
@@ -114,5 +117,6 @@ with open('clientTCPOut.log', 'w') as log:
     else:
         msgSend(fileError, s)
     s.close()
-
+    # Envia el numero de bytes recibidos despues de recibir el archivo
+    rq.send_metric()
     sout('connection closed')
