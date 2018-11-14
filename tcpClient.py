@@ -44,7 +44,7 @@ def recvall(sock, n):
 
 
 def getProperties():
-    with open('TCP/configTCP.json', 'r') as file:
+    with open('configTCP.json', 'r') as file:
         properties = json.load(file)
     return properties
 
