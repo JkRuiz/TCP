@@ -77,8 +77,13 @@ with open('clientTCPOut.log', 'w') as log:
     endFile = 'END_OF_FILE'
     sout('done with defining variables')
 
-    # connect to server
-    s.connect((host, port))
+    while(true):
+        try:
+            # connect to server
+            s.connect((host, port))
+            break
+        except:
+            time.sleep(5)
 
     # tell server client is ready to receive
     msgSend(statusOk, s)
