@@ -81,6 +81,14 @@ def sout(l):
     print(l)
 
 
+def swapProperties(n):
+    with open('configTCP.json', 'r') as file:
+        tmp = json.load(file)
+        tmp['indicatorTest'] = tmp['indicatorTest'] + 1
+    with open('configTCP.json', 'w') as file:
+        file.write(json.dumps(tmp))
+
+
 indicator = 0
 properties = getProperties()
 fileName = properties['fileName']
@@ -129,3 +137,4 @@ with open((logPrefix), 'w') as log:
 
     summary = str(datetime.datetime.now() - tStart) + "s"
     sout("S: Transfered in " + summary)
+    swapProperties()
