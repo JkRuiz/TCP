@@ -81,7 +81,7 @@ def sout(l):
     print(l)
 
 
-def swapProperties(n):
+def swapProperties():
     with open('configTCP.json', 'r') as file:
         tmp = json.load(file)
         tmp['indicatorTest'] = tmp['indicatorTest'] + 1

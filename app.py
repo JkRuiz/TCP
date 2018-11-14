@@ -16,8 +16,8 @@ def getProperties():
 @app.route('/metrics', methods=['POST'])
 def register():
     reqJson = json.loads(request.json)
-    fileName = 'Metrics/metrics_T' + indicator + '.txt'
-    with open((fileName), "w") as metrics:
+    fileName = 'Metrics/metrics_T' + str(indicator) + '.txt'
+    with open((fileName), "a") as metrics:
         ip = str(reqJson['ipClient'])
         receivedBytes = str(reqJson['bytes'])
         time = str(reqJson['time'])
