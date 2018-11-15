@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 numberClients = 0
-indicator = 0
+indicator = 1
 contador = 0
 
 
