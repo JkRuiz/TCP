@@ -57,8 +57,6 @@ def sout(s):
 
 
 with open('clientTCPOut.log', 'w') as log:
-    # Eliminar el archivo si ya existe
-    os.remove("R_*")
 
     # Envia el numero de bytes recibidos antes de recibir el archivo
     while(True):
@@ -106,6 +104,13 @@ with open('clientTCPOut.log', 'w') as log:
 
     # create hasher to check integrity later on
     hasher = hashlib.md5()
+
+    # Eliminar el archivo si ya existe
+    try:
+        os.remove("R_" + fileName)
+    except:
+        sout('The file didnt exist before')
+        pass
 
     with open("R_" + fileName, 'wb') as f:
         i = 0
