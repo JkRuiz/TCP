@@ -3,20 +3,31 @@ import json
 
 
 app = Flask(__name__)
-indicator = None
+numberClients = 0
+indicator = 0
+contador = 0
 
 
-def getProperties():
+def get_indicator():
+    if contador < numberClients:
+        contador += 1
+    else:
+        indicator += 1
+        contador = 0
+    return indicator
+
+
+def get_clients():
     with open('configTCP.json', 'r') as file:
         properties = json.load(file)
-        testInd = properties['indicatorTest']
-    return testInd
+        clients = int(properties['numberClients'])
+    return clients
 
 
 @app.route('/metrics', methods=['POST'])
 def register():
     reqJson = json.loads(request.json)
-    indicator = getProperties()
+    indicator = get_indicator()
     fileName = 'Metrics/metrics_T' + str(indicator) + '.txt'
     with open((fileName), "a") as metrics:
         ip = str(reqJson['ipClient'])
@@ -31,4 +42,5 @@ def register():
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
+    numberClients = get_clients()
     app.run(host='157.253.205.122')
