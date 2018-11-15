@@ -16,6 +16,7 @@ def getProperties():
 @app.route('/metrics', methods=['POST'])
 def register():
     reqJson = json.loads(request.json)
+    indicator = getProperties()
     fileName = 'Metrics/metrics_T' + str(indicator) + '.txt'
     with open((fileName), "a") as metrics:
         ip = str(reqJson['ipClient'])
@@ -30,5 +31,4 @@ def register():
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
-    indicator = getProperties()
     app.run(host='157.253.205.122')
