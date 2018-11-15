@@ -4,6 +4,7 @@ import socket
 import hashlib
 import sys
 import request as rq
+import os
 
 
 def msgSend(msg, sock):
@@ -56,6 +57,9 @@ def sout(s):
 
 
 with open('clientTCPOut.log', 'w') as log:
+    # Eliminar el archivo si ya existe
+    os.remove("R_*")
+
     # Envia el numero de bytes recibidos antes de recibir el archivo
     rq.send_metric()
     # load properties form json file

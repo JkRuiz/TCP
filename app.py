@@ -10,7 +10,7 @@ contador = 0
 
 def get_indicator():
     global contador, numerClientes, indicator
-    if contador < numberClients*2:
+    if contador < numberClients * 2:
         contador += 1
     else:
         indicator += 1
@@ -34,7 +34,7 @@ def register():
         ip = str(reqJson['ipClient'])
         receivedBytes = str(reqJson['bytes'])
         time = str(reqJson['time'])
-        metrics.write('Cliente - ' + ip + ': \n')
+        metrics.write('Cliente - ' + ip + '\n')
         metrics.write('Bytes recibidos - ' + receivedBytes + '\n')
         metrics.write('Fecha - ' + time + '\n')
         metrics.write('--------------------------------------------------' + '\n')
