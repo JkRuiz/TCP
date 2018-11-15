@@ -61,7 +61,15 @@ with open('clientTCPOut.log', 'w') as log:
     os.remove("R_*")
 
     # Envia el numero de bytes recibidos antes de recibir el archivo
-    rq.send_metric()
+    while(True):
+        try:
+            # connect to server
+            rq.send_metric()
+            break
+        except:
+            sout('waiting for server to send metrics...')
+            time.sleep(5)
+
     # load properties form json file
     properties = getProperties()
     host = str(properties['serverIp'])
@@ -87,7 +95,7 @@ with open('clientTCPOut.log', 'w') as log:
             s.connect((host, port))
             break
         except:
-            sout('waiting for server...')
+            sout('waiting for server to start connection...')
             time.sleep(5)
 
     # tell server client is ready to receive
