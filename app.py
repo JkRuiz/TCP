@@ -9,11 +9,12 @@ contador = 0
 
 
 def get_indicator():
-    if contador < numberClients:
+    global contador, numerClientes, indicator
+    if contador < numberClients*2:
         contador += 1
     else:
         indicator += 1
-        contador = 0
+        contador = 1
     return indicator
 
 
@@ -42,5 +43,6 @@ def register():
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
+    contador = 0
     numberClients = get_clients()
     app.run(host='157.253.205.122')
